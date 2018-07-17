@@ -1,0 +1,50 @@
+{
+  "name": "@splytech-io/process-tracker",
+  "version": "1.0.0",
+  "description": "Background Process Tracker",
+  "main": "build/process-tracker.js",
+  "types": "build/process-tracker.d.ts",
+  "scripts": {
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --project . --fix",
+    "test": "nyc mocha --require ts-node/register 'src/**/*.spec.ts'",
+    "build": "tsc -p .",
+    "prepublishOnly": "npm run lint && npm run build && npm run test"
+  },
+  "keywords": [
+    "background",
+    "process",
+    "tracker"
+  ],
+  "author": "Andrius Skerla",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "tslint-consistent-codestyle": "^1.13.1",
+    "tslint-eslint-rules": "^5.3.1",
+    "nyc": "^12.0.2",
+    "typescript": "^2.9.2"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "html",
+      "text-summary",
+      "json-summary"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.spec.ts"
+    ]
+  }
+}

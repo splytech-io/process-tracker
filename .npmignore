@@ -1,0 +1,4 @@
+.idea
+.git
+.nyc_output
+node_modules

@@ -1,0 +1,12 @@
+node_modules
+.idea
+build
+.nyc_output
+coverage
+config/*
+!config/custom-environment-variables.yml
+!config/.npmrc
+!config/default.yml
+!config/ci-test.yml
+temp*
+certs

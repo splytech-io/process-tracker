@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "baseUrl": "./",
+    "lib": [
+      "es2017"
+    ],
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "./build",
+    "sourceMap": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "target": "ES2017"
+  },
+  "include": [
+    "src/**/*.ts",
+    "clients/splyt/src/**/*.ts",
+    "clients/internal/src/**/*.ts"
+  ]
+}
