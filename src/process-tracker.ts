@@ -9,7 +9,22 @@ export class ProcessTracker extends EventEmitter {
    */
   trackPromise(promise: Promise<any>) {
     this.inc();
-    promise.then(() => this.dec(), () => this.dec());
+    promise.finally(() => this.dec());
+  }
+
+  /**
+   *
+   * @param {() => Promise<T>} fn
+   * @returns {() => Promise<T>}
+   */
+  trackFunctionCall<T, U extends (...args: any[]) => Promise<T>>(fn: U): U {
+    return ((...args) => {
+      const promise = fn(...args);
+
+      this.trackPromise(promise);
+
+      return promise;
+    }) as U;
   }
 
   /**

@@ -3,7 +3,7 @@
     "alwaysStrict": true,
     "baseUrl": "./",
     "lib": [
-      "es2017"
+      "esnext"
     ],
     "declaration": true,
     "module": "commonjs",
@@ -19,7 +19,7 @@
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "target": "ES2017"
+    "target": "ES2019"
   },
   "include": [
     "src/**/*.ts",

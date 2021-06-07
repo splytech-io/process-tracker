@@ -1,5 +1,5 @@
-import { ProcessTracker } from './process-tracker';
 import { expect } from 'chai';
+import { ProcessTracker } from './process-tracker';
 
 describe('ProcessTracker', () => {
   it('should return 0 count', async () => {
@@ -80,5 +80,21 @@ describe('ProcessTracker', () => {
     const diff = after - before;
 
     expect(diff).to.be.gte(50);
+  });
+  it('should track function call', async () => {
+    const pt = new ProcessTracker();
+
+    const fn = pt.trackFunctionCall(async (a: number, b: string) => {
+      return `${a} + ${b}`;
+    });
+
+    const promise = fn(2, 'a');
+
+    expect(pt.getCount()).to.equals(1);
+
+    const r: string = await promise;
+
+    expect(pt.getCount()).to.equals(0);
+    expect(r).to.equals('2 + a');
   });
 });

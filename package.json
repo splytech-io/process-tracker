@@ -1,6 +1,6 @@
 {
   "name": "@splytech-io/process-tracker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Background Process Tracker",
   "main": "build/process-tracker.js",
   "types": "build/process-tracker.d.ts",
@@ -19,17 +19,18 @@
   "author": "Andrius Skerla",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/chai": "^4.1.4",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.5.2",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "tslint-consistent-codestyle": "^1.13.1",
-    "tslint-eslint-rules": "^5.3.1",
-    "nyc": "^12.0.2",
-    "typescript": "^2.9.2"
+    "@splytech-io/utils": "^3.10.0",
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.12.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.0.0",
+    "tslint": "^6.1.3",
+    "tslint-consistent-codestyle": "^1.16.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^4.3.2"
   },
   "nyc": {
     "extension": [
