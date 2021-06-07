@@ -9,6 +9,8 @@ export class ProcessTracker extends EventEmitter {
    */
   trackPromise(promise: Promise<any>) {
     this.inc();
+
+    // tslint:disable-next-line no-floating-promises
     promise.finally(() => this.dec());
   }
 
@@ -18,6 +20,7 @@ export class ProcessTracker extends EventEmitter {
    * @returns {() => Promise<T>}
    */
   trackFunctionCall<T, U extends (...args: any[]) => Promise<T>>(fn: U): U {
+    // tslint:disable-next-line promise-function-async
     return ((...args) => {
       const promise = fn(...args);
 
