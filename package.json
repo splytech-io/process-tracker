@@ -19,7 +19,6 @@
   "author": "Andrius Skerla",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@splytech-io/utils": "^3.10.0",
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.12.1",
