@@ -9,7 +9,8 @@
     "lint:fix": "tslint --project . --fix",
     "test": "nyc mocha --require ts-node/register 'src/**/*.spec.ts'",
     "build": "tsc -p .",
-    "prepublishOnly": "npm run lint && npm run build && npm run test"
+    "prepublishOnly": "npm run lint && npm run build && npm run test",
+    "prepare": "husky install"
   },
   "keywords": [
     "background",
