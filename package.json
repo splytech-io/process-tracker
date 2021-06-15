@@ -1,6 +1,6 @@
 {
   "name": "@splytech-io/process-tracker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Background Process Tracker",
   "main": "build/process-tracker.js",
   "types": "build/process-tracker.d.ts",

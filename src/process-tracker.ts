@@ -10,8 +10,7 @@ export class ProcessTracker extends EventEmitter {
   trackPromise(promise: Promise<any>) {
     this.inc();
 
-    // tslint:disable-next-line no-floating-promises
-    promise.finally(() => this.dec());
+    promise.finally(() => this.dec()).catch(() => null);
   }
 
   /**
