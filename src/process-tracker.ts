@@ -10,7 +10,9 @@ export class ProcessTracker extends EventEmitter {
   trackPromise(promise: Promise<any>) {
     this.inc();
 
-    promise.finally(() => this.dec()).catch(() => null);
+    const done = () => this.dec();
+
+    promise.then(done, done);
   }
 
   /**
